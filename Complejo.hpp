@@ -14,7 +14,7 @@ class Complejo
         Complejo conjugado();
         Complejo suma(Complejo& C);
         Complejo multiplicacion(Complejo& C);
-        Complejo multiEscalar(double);
+        Complejo multiEscalar(double esc);
         void imprime();    
     private:
         double real, imaginario;
