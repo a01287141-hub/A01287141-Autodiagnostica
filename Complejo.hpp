@@ -4,17 +4,17 @@ class Complejo
 {
     public:
         Complejo();
-        Complejo(double r, double i);
+        Complejo(double, double);
         //~Complejo();
         double getReal() const;
-        void setReal(double r);
+        void setReal(double);
         double getImaginario() const;
-        void setImaginario(double i);
-        void agregar(Complejo& C);
+        void setImaginario(double);
+        void agregar(Complejo&);
         Complejo conjugado();
-        Complejo suma(Complejo& C);
-        Complejo multiplicacion(Complejo& C);
-        Complejo multiEscalar(double esc);
+        Complejo suma(Complejo&);
+        Complejo multiplicacion(Complejo&);
+        Complejo multiEscalar(double);
         void imprime();    
     private:
         double real, imaginario;
