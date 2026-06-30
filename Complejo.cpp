@@ -7,7 +7,7 @@ Complejo::Complejo(double r, double i):real{r}, imaginario{i}{
 }
 
 double Complejo::getReal() const{
-  return r;
+  return real;
 }
 
 void Complejo::setReal(double r){
@@ -15,10 +15,22 @@ void Complejo::setReal(double r){
 }
 
 double Complejo::getImaginario(){
-  return i;
+  return imaginario;
 }
 
 void Complejo::setImaginario(double i){
   imaginario = i;
 }
 
+void Complejo::agregar(Complejo& C){
+  real += C.getReal()
+  imaginario += C.getImaginario()
+}
+
+Complejo Complejo::conjugado(){
+  return Complejo(real, -imaginario);
+}
+
+Complejo Complejo::suma(Complejo& C){
+  return Complejo(real+C.getReal(), imaginario+C.getImaginario());
+}
