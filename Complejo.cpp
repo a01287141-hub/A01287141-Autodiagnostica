@@ -1,4 +1,5 @@
 #include "Complejo.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ void Complejo::setReal(double r){
   real = r;
 }
 
-double Complejo::getImaginario(){
+double Complejo::getImaginario() const{
   return imaginario;
 }
 
@@ -38,7 +39,7 @@ Complejo Complejo::suma(Complejo& C){
 }
 
 Complejo Complejo::multiplicacion(Complejo& C){
-  return Complejo(real*C.getReal()-imaginario*C.getImaginario(),real*imaginario+C.getReal()*C.getImaginario());
+  return Complejo(real*C.getReal()-imaginario*C.getImaginario(),real*C.getImaginario()+C.getReal()*imaginario);
 }
 
 Complejo Complejo::multiEscalar(double esc){
@@ -52,5 +53,7 @@ if (imaginario >= 0)
 else
   cout<<" - "<<imaginario<<"i";
 }
+
+  
 
   
