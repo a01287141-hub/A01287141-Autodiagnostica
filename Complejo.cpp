@@ -1,5 +1,7 @@
 #include "Complejo.hpp"
 
+using namespace std;
+
 Complejo::Complejo():real{0}, imaginario{0}{
 }
 
