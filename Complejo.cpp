@@ -23,8 +23,8 @@ void Complejo::setImaginario(double i){
 }
 
 void Complejo::agregar(Complejo& C){
-  real += C.getReal()
-  imaginario += C.getImaginario()
+  real += C.getReal();
+  imaginario += C.getImaginario();
 }
 
 Complejo Complejo::conjugado(){
@@ -34,3 +34,21 @@ Complejo Complejo::conjugado(){
 Complejo Complejo::suma(Complejo& C){
   return Complejo(real+C.getReal(), imaginario+C.getImaginario());
 }
+
+Complejo Complejo::multiplicacion(Complejo& C){
+  return Complejo(real*C.getReal()-imaginario*C.getImaginario(),real*imaginario+C.getReal()*C.getImaginario());
+}
+
+Complejo Complejo::multiEscalar(double esc){
+  return Complejo(real*esc, imaginario*esc);
+}
+
+void Complejo::imprime(){
+  cout<<real;
+if (imaginario >= 0)
+  cout<<" + "<<imaginario<<"i";
+else
+  cout<<" - "<<imaginario<<"i";
+}
+
+  
